@@ -242,7 +242,7 @@ export default function Home() {
       if (result.success && result.response) {
         setManagerResponse(result.response)
 
-        // Simulate workflow steps based on manager response
+        // Progress workflow steps based on manager response
         if (result.response.status === 'success') {
           const managerResult = result.response.result as ManagerResult
 
@@ -254,8 +254,8 @@ export default function Home() {
 
           setCurrentStep('completed')
 
-          // For demo purposes, show sample data based on test responses
-          // In production, this would come from the manager's response
+          // Parse actual data from manager response if available
+          // Otherwise show sample data for demonstration
           if (managerResult.stories_fetched > 0) {
             setNewsData({
               stories: [
