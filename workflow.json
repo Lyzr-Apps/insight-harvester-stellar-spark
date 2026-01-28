@@ -1,0 +1,116 @@
+{
+  "workflow_name": "HackerNews Daily Digest",
+  "workflow_type": "manager-subagent",
+  "nodes": [
+    {
+      "id": "user_input",
+      "type": "Input",
+      "label": "User Trigger",
+      "nodeCategory": "input",
+      "position": {"x": 100, "y": 200}
+    },
+    {
+      "id": "manager_agent",
+      "type": "Agent",
+      "label": "HackerNews Digest Manager",
+      "nodeCategory": "agent",
+      "position": {"x": 300, "y": 200},
+      "data": {
+        "agent_id": "6979da2088953e3309db20e0",
+        "agent_name": "HackerNews Digest Manager",
+        "agent_type": "manager"
+      }
+    },
+    {
+      "id": "news_aggregator",
+      "type": "Agent",
+      "label": "News Aggregator",
+      "nodeCategory": "agent",
+      "position": {"x": 500, "y": 100},
+      "data": {
+        "agent_id": "6979d9df88953e3309db20c7",
+        "agent_name": "News Aggregator",
+        "agent_type": "sub-agent"
+      }
+    },
+    {
+      "id": "content_summarizer",
+      "type": "Agent",
+      "label": "Content Summarizer",
+      "nodeCategory": "agent",
+      "position": {"x": 700, "y": 100},
+      "data": {
+        "agent_id": "6979d9f288953e3309db20cc",
+        "agent_name": "Content Summarizer",
+        "agent_type": "sub-agent"
+      }
+    },
+    {
+      "id": "email_sender",
+      "type": "Agent",
+      "label": "Email Sender",
+      "nodeCategory": "agent",
+      "position": {"x": 900, "y": 100},
+      "data": {
+        "agent_id": "6979da0788953e3309db20db",
+        "agent_name": "Email Sender",
+        "agent_type": "sub-agent"
+      }
+    },
+    {
+      "id": "output_node",
+      "type": "Output",
+      "label": "Digest Sent",
+      "nodeCategory": "end",
+      "position": {"x": 1100, "y": 200}
+    }
+  ],
+  "edges": [
+    {"source": "user_input", "target": "manager_agent"},
+    {"source": "manager_agent", "target": "news_aggregator"},
+    {"source": "news_aggregator", "target": "content_summarizer"},
+    {"source": "content_summarizer", "target": "email_sender"},
+    {"source": "email_sender", "target": "output_node"}
+  ],
+  "agents": {
+    "manager": {
+      "agent_id": "6979da2088953e3309db20e0",
+      "name": "HackerNews Digest Manager",
+      "description": "Orchestrates news fetching, summarization, and email delivery",
+      "provider": "OpenAI",
+      "model": "gpt-4o",
+      "temperature": 0.3,
+      "top_p": 1
+    },
+    "sub_agents": [
+      {
+        "agent_id": "6979d9df88953e3309db20c7",
+        "name": "News Aggregator",
+        "description": "Fetches top stories and discussions from HackerNews API",
+        "provider": "OpenAI",
+        "model": "gpt-4o",
+        "temperature": 0.5,
+        "top_p": 0.95
+      },
+      {
+        "agent_id": "6979d9f288953e3309db20cc",
+        "name": "Content Summarizer",
+        "description": "Analyzes and summarizes stories with key insights",
+        "provider": "OpenAI",
+        "model": "gpt-4o",
+        "temperature": 0.7,
+        "top_p": 0.95
+      },
+      {
+        "agent_id": "6979da0788953e3309db20db",
+        "name": "Email Sender",
+        "description": "Sends formatted digest via Gmail",
+        "provider": "OpenAI",
+        "model": "gpt-4o",
+        "temperature": 0.3,
+        "top_p": 1,
+        "tools": ["gmail"]
+      }
+    ]
+  }
+}

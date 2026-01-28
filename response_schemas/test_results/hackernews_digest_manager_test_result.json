@@ -1,0 +1,27 @@
+{
+  "agent_name": "HackerNews Digest Manager",
+  "agent_id": "6979da2088953e3309db20e0",
+  "test_message": "Generate and send HackerNews digest for the past 3 days to user@example.com",
+  "expected_purpose": "manager",
+  "timestamp": "2026-01-28T09:45:47.556499",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "error",
+    "result": {
+      "workflow_status": "failed",
+      "stories_fetched": 3,
+      "stories_summarized": 3,
+      "email_delivered": false,
+      "recipient": "user@example.com",
+      "lookback_days": 3,
+      "execution_time_ms": 120000,
+      "summary": "Failed to deliver the HackerNews Digest via email despite successful story fetching and summarization."
+    },
+    "metadata": {
+      "agent_name": "HackerNews Digest Manager",
+      "timestamp": "2023-11-29T06:28:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"error\",\n  \"result\": {\n    \"workflow_status\": \"failed\",\n    \"stories_fetched\": 3,\n    \"stories_summarized\": 3,\n    \"email_delivered\": false,\n    \"recipient\": \"user@example.com\",\n    \"lookback_days\": 3,\n    \"execution_time_ms\": 120000,\n    \"summary\": \"Failed to deliver the HackerNews Digest via email despite successful story fetching and summarization.\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"HackerNews Digest Manager\",\n    \"timestamp\": \"2023-11-29T06:28:00Z\"\n  }\n}"
+}

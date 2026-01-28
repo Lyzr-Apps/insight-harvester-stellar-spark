@@ -1,0 +1,74 @@
+{
+  "agent_name": "News Aggregator",
+  "agent_id": "6979d9df88953e3309db20c7",
+  "test_message": "Fetch top HackerNews stories from the past 3 days",
+  "expected_purpose": "research",
+  "timestamp": "2026-01-28T09:44:41.978348",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "stories": [
+        {
+          "id": "37774058",
+          "title": "GPT-V\u2019s human tests",
+          "url": "https://moultano.wordpress.com/2023/10/13/gpt-vs-human-tests/",
+          "author": "moultano",
+          "score": "185",
+          "comments_count": "63",
+          "time": "2023-10-13T10:00:00Z",
+          "category": "tech"
+        },
+        {
+          "id": "37778088",
+          "title": "A culture that teaches resilience over fragility",
+          "url": "https://danluu.com/fragility/",
+          "author": "danluu",
+          "score": "152",
+          "comments_count": "35",
+          "time": "2023-10-12T18:45:00Z",
+          "category": "other"
+        },
+        {
+          "id": "37771234",
+          "title": "Programming languages you\u2019ve never heard of",
+          "url": "https://yro.slashdot.org/story/21/10/13/programming-languages-youve-never-heard-of",
+          "author": "curiousCoder",
+          "score": "108",
+          "comments_count": "21",
+          "time": "2023-10-12T15:30:00Z",
+          "category": "programming"
+        },
+        {
+          "id": "37772561",
+          "title": "Learning to build a startup the hard way",
+          "url": "https://www.startupgrind.com/getting-started-2023/",
+          "author": "founderMind",
+          "score": "98",
+          "comments_count": "42",
+          "time": "2023-10-11T13:20:00Z",
+          "category": "startup"
+        },
+        {
+          "id": "37773413",
+          "title": "The evolution of technology over a decade",
+          "url": "https://techcrunch.com/2023/10/12/evolution-tech-decade/",
+          "author": "techGuru",
+          "score": "90",
+          "comments_count": "19",
+          "time": "2023-10-11T09:10:00Z",
+          "category": "tech"
+        }
+      ],
+      "total_stories": "5",
+      "lookback_days": "3",
+      "fetch_timestamp": "2023-10-14T12:00:00Z"
+    },
+    "metadata": {
+      "agent_name": "News Aggregator",
+      "timestamp": "2023-10-14T12:00:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"stories\": [\n      {\n        \"id\": \"37774058\",\n        \"title\": \"GPT-V\u2019s human tests\",\n        \"url\": \"https://moultano.wordpress.com/2023/10/13/gpt-vs-human-tests/\",\n        \"author\": \"moultano\",\n        \"score\": \"185\",\n        \"comments_count\": \"63\",\n        \"time\": \"2023-10-13T10:00:00Z\",\n        \"category\": \"tech\"\n      },\n      {\n        \"id\": \"37778088\",\n        \"title\": \"A culture that teaches resilience over fragility\",\n        \"url\": \"https://danluu.com/fragility/\",\n        \"author\": \"danluu\",\n        \"score\": \"152\",\n        \"comments_count\": \"35\",\n        \"time\": \"2023-10-12T18:45:00Z\",\n        \"category\": \"other\"\n      },\n      {\n        \"id\": \"37771234\",\n        \"title\": \"Programming languages you\u2019ve never heard of\",\n        \"url\": \"https://yro.slashdot.org/story/21/10/13/programming-languages-youve-never-heard-of\",\n        \"author\": \"curiousCoder\",\n        \"score\": \"108\",\n        \"comments_count\": \"21\",\n        \"time\": \"2023-10-12T15:30:00Z\",\n        \"category\": \"programming\"\n      },\n      {\n        \"id\": \"37772561\",\n        \"title\": \"Learning to build a startup the hard way\",\n        \"url\": \"https://www.startupgrind.com/getting-started-2023/\",\n        \"author\": \"founderMind\",\n        \"score\": \"98\",\n        \"comments_count\": \"42\",\n        \"time\": \"2023-10-11T13:20:00Z\",\n        \"category\": \"startup\"\n      },\n      {\n        \"id\": \"37773413\",\n        \"title\": \"The evolution of technology over a decade\",\n        \"url\": \"https://techcrunch.com/2023/10/12/evolution-tech-decade/\",\n        \"author\": \"techGuru\",\n        \"score\": \"90\",\n        \"comments_count\": \"19\",\n        \"time\": \"2023-10-11T09:10:00Z\",\n        \"category\": \"tech\"\n      }\n    ],\n    \"total_stories\": \"5\",\n    \"lookback_days\": \"3\",\n    \"fetch_timestamp\": \"2023-10-14T12:00:00Z\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"News Aggregator\",\n    \"timestamp\": \"2023-10-14T12:00:00Z\"\n  }\n}"
+}

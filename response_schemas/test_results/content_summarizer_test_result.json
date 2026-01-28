@@ -1,0 +1,81 @@
+{
+  "agent_name": "Content Summarizer",
+  "agent_id": "6979d9f288953e3309db20cc",
+  "test_message": "Summarize these stories: 1) AI model breakthrough 2) New framework released 3) Security vulnerability discovered",
+  "expected_purpose": "analyzer",
+  "timestamp": "2026-01-28T09:44:52.320866",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "summary": "Recent discussions on HackerNews highlight significant advancements in AI, development tools, and cybersecurity. An AI model breakthrough promises enhancements in performance and efficiency, while a new framework aims to streamline application development. However, a critical security vulnerability has raised concerns over data protection and system integrity.",
+      "top_stories": [
+        {
+          "title": "AI model breakthrough",
+          "url": "https://example.com/ai-model-breakthrough",
+          "summary": "A new AI model has been unveiled, showcasing substantial improvements in processing speed and accuracy. This breakthrough could significantly impact various AI-driven applications by reducing computational costs.",
+          "key_points": [
+            "Improved processing speed",
+            "Higher accuracy",
+            "Cost reduction in AI applications"
+          ],
+          "category": "AI/ML",
+          "engagement_score": 75
+        },
+        {
+          "title": "New framework released",
+          "url": "https://example.com/new-framework-released",
+          "summary": "Developers now have access to a new framework that simplifies building complex applications. It offers enhanced features and integrates seamlessly with existing technologies, promising to boost productivity.",
+          "key_points": [
+            "Simplifies application development",
+            "Integrates with existing tech",
+            "Boosts productivity"
+          ],
+          "category": "Programming",
+          "engagement_score": 60
+        },
+        {
+          "title": "Security vulnerability discovered",
+          "url": "https://example.com/security-vulnerability-discovered",
+          "summary": "A newly discovered security vulnerability has been identified, potentially exposing user data and compromising system security. Immediate action is recommended to mitigate risks.",
+          "key_points": [
+            "Security flaw identified",
+            "Risk of data exposure",
+            "Urgent mitigation needed"
+          ],
+          "category": "Cybersecurity",
+          "engagement_score": 85
+        }
+      ],
+      "trending_topics": [
+        {
+          "topic": "AI/ML advancements",
+          "count": 3,
+          "relevance": "high"
+        },
+        {
+          "topic": "Development tools",
+          "count": 2,
+          "relevance": "medium"
+        },
+        {
+          "topic": "Cybersecurity threats",
+          "count": 1,
+          "relevance": "high"
+        }
+      ],
+      "key_insights": [
+        "AI continues to evolve with breakthroughs that enhance its applicability.",
+        "New frameworks can greatly boost developer efficiency.",
+        "Security remains a top priority as vulnerabilities pose critical risks."
+      ],
+      "total_analyzed": 3
+    },
+    "metadata": {
+      "agent_name": "Content Summarizer",
+      "timestamp": "2023-11-29T14:23:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"summary\": \"Recent discussions on HackerNews highlight significant advancements in AI, development tools, and cybersecurity. An AI model breakthrough promises enhancements in performance and efficiency, while a new framework aims to streamline application development. However, a critical security vulnerability has raised concerns over data protection and system integrity.\",\n    \"top_stories\": [\n      {\n        \"title\": \"AI model breakthrough\",\n        \"url\": \"https://example.com/ai-model-breakthrough\",\n        \"summary\": \"A new AI model has been unveiled, showcasing substantial improvements in processing speed and accuracy. This breakthrough could significantly impact various AI-driven applications by reducing computational costs.\",\n        \"key_points\": [\"Improved processing speed\", \"Higher accuracy\", \"Cost reduction in AI applications\"],\n        \"category\": \"AI/ML\",\n        \"engagement_score\": 75\n      },\n      {\n        \"title\": \"New framework released\",\n        \"url\": \"https://example.com/new-framework-released\",\n        \"summary\": \"Developers now have access to a new framework that simplifies building complex applications. It offers enhanced features and integrates seamlessly with existing technologies, promising to boost productivity.\",\n        \"key_points\": [\"Simplifies application development\", \"Integrates with existing tech\", \"Boosts productivity\"],\n        \"category\": \"Programming\",\n        \"engagement_score\": 60\n      },\n      {\n        \"title\": \"Security vulnerability discovered\",\n        \"url\": \"https://example.com/security-vulnerability-discovered\",\n        \"summary\": \"A newly discovered security vulnerability has been identified, potentially exposing user data and compromising system security. Immediate action is recommended to mitigate risks.\",\n        \"key_points\": [\"Security flaw identified\", \"Risk of data exposure\", \"Urgent mitigation needed\"],\n        \"category\": \"Cybersecurity\",\n        \"engagement_score\": 85\n      }\n    ],\n    \"trending_topics\": [\n      {\n        \"topic\": \"AI/ML advancements\",\n        \"count\": 3,\n        \"relevance\": \"high\"\n      },\n      {\n        \"topic\": \"Development tools\",\n        \"count\": 2,\n        \"relevance\": \"medium\"\n      },\n      {\n        \"topic\": \"Cybersecurity threats\",\n        \"count\": 1,\n        \"relevance\": \"high\"\n      }\n    ],\n    \"key_insights\": [\n      \"AI continues to evolve with breakthroughs that enhance its applicability.\",\n      \"New frameworks can greatly boost developer efficiency.\",\n      \"Security remains a top priority as vulnerabilities pose critical risks.\"\n    ],\n    \"total_analyzed\": 3\n  },\n  \"metadata\": {\n    \"agent_name\": \"Content Summarizer\",\n    \"timestamp\": \"2023-11-29T14:23:00Z\"\n  }\n}"
+}

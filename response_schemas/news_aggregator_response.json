@@ -1,0 +1,162 @@
+{
+  "agent_name": "News Aggregator",
+  "agent_id": "6979d9df88953e3309db20c7",
+  "agent_purpose": "parser",
+  "description": "Fetches and parses HackerNews stories with metadata including title, URL, author, score, and comments count",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "stories": [
+        {
+          "id": "string",
+          "title": "string",
+          "url": "string",
+          "author": "string",
+          "score": "string",
+          "comments_count": "string",
+          "time": "string",
+          "category": "string"
+        }
+      ],
+      "total_stories": "string",
+      "lookback_days": "string",
+      "fetch_timestamp": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "stories": [
+        {
+          "id": "37774058",
+          "title": "GPT-V\u2019s human tests",
+          "url": "https://moultano.wordpress.com/2023/10/13/gpt-vs-human-tests/",
+          "author": "moultano",
+          "score": "185",
+          "comments_count": "63",
+          "time": "2023-10-13T10:00:00Z",
+          "category": "tech"
+        },
+        {
+          "id": "37778088",
+          "title": "A culture that teaches resilience over fragility",
+          "url": "https://danluu.com/fragility/",
+          "author": "danluu",
+          "score": "152",
+          "comments_count": "35",
+          "time": "2023-10-12T18:45:00Z",
+          "category": "other"
+        },
+        {
+          "id": "37771234",
+          "title": "Programming languages you\u2019ve never heard of",
+          "url": "https://yro.slashdot.org/story/21/10/13/programming-languages-youve-never-heard-of",
+          "author": "curiousCoder",
+          "score": "108",
+          "comments_count": "21",
+          "time": "2023-10-12T15:30:00Z",
+          "category": "programming"
+        },
+        {
+          "id": "37772561",
+          "title": "Learning to build a startup the hard way",
+          "url": "https://www.startupgrind.com/getting-started-2023/",
+          "author": "founderMind",
+          "score": "98",
+          "comments_count": "42",
+          "time": "2023-10-11T13:20:00Z",
+          "category": "startup"
+        },
+        {
+          "id": "37773413",
+          "title": "The evolution of technology over a decade",
+          "url": "https://techcrunch.com/2023/10/12/evolution-tech-decade/",
+          "author": "techGuru",
+          "score": "90",
+          "comments_count": "19",
+          "time": "2023-10-11T09:10:00Z",
+          "category": "tech"
+        }
+      ],
+      "total_stories": "5",
+      "lookback_days": "3",
+      "fetch_timestamp": "2023-10-14T12:00:00Z"
+    },
+    "metadata": {
+      "agent_name": "News Aggregator",
+      "timestamp": "2023-10-14T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-28T09:44:41.979421",
+  "test_message_used": "Parse this sample text for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "stories": [
+        {
+          "id": "37774058",
+          "title": "GPT-V\u2019s human tests",
+          "url": "https://moultano.wordpress.com/2023/10/13/gpt-vs-human-tests/",
+          "author": "moultano",
+          "score": "185",
+          "comments_count": "63",
+          "time": "2023-10-13T10:00:00Z",
+          "category": "tech"
+        },
+        {
+          "id": "37778088",
+          "title": "A culture that teaches resilience over fragility",
+          "url": "https://danluu.com/fragility/",
+          "author": "danluu",
+          "score": "152",
+          "comments_count": "35",
+          "time": "2023-10-12T18:45:00Z",
+          "category": "other"
+        },
+        {
+          "id": "37771234",
+          "title": "Programming languages you\u2019ve never heard of",
+          "url": "https://yro.slashdot.org/story/21/10/13/programming-languages-youve-never-heard-of",
+          "author": "curiousCoder",
+          "score": "108",
+          "comments_count": "21",
+          "time": "2023-10-12T15:30:00Z",
+          "category": "programming"
+        },
+        {
+          "id": "37772561",
+          "title": "Learning to build a startup the hard way",
+          "url": "https://www.startupgrind.com/getting-started-2023/",
+          "author": "founderMind",
+          "score": "98",
+          "comments_count": "42",
+          "time": "2023-10-11T13:20:00Z",
+          "category": "startup"
+        },
+        {
+          "id": "37773413",
+          "title": "The evolution of technology over a decade",
+          "url": "https://techcrunch.com/2023/10/12/evolution-tech-decade/",
+          "author": "techGuru",
+          "score": "90",
+          "comments_count": "19",
+          "time": "2023-10-11T09:10:00Z",
+          "category": "tech"
+        }
+      ],
+      "total_stories": "5",
+      "lookback_days": "3",
+      "fetch_timestamp": "2023-10-14T12:00:00Z"
+    },
+    "metadata": {
+      "agent_name": "News Aggregator",
+      "timestamp": "2023-10-14T12:00:00Z"
+    }
+  },
+  "test_passed": true
+}

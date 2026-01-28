@@ -1,0 +1,50 @@
+{
+  "workflow_created": true,
+  "agents": [
+    {
+      "name": "News Aggregator",
+      "agent_id": "6979d9df88953e3309db20c7",
+      "type": "sub-agent",
+      "role": "HackerNews API Data Fetcher",
+      "status": "created",
+      "response_schema": "response_schemas/news_aggregator_response.json"
+    },
+    {
+      "name": "Content Summarizer",
+      "agent_id": "6979d9f288953e3309db20cc",
+      "type": "sub-agent",
+      "role": "Content Analysis and Summarization Specialist",
+      "status": "created",
+      "response_schema": "response_schemas/content_summarizer_response.json"
+    },
+    {
+      "name": "Email Sender",
+      "agent_id": "6979da0788953e3309db20db",
+      "type": "sub-agent",
+      "role": "Email Delivery Specialist",
+      "status": "created",
+      "response_schema": "response_schemas/email_sender_response.json",
+      "tools": ["gmail"]
+    },
+    {
+      "name": "HackerNews Digest Manager",
+      "agent_id": "6979da2088953e3309db20e0",
+      "type": "manager",
+      "role": "HackerNews Digest Orchestrator",
+      "status": "created",
+      "response_schema": "response_schemas/hackernews_digest_manager_response.json",
+      "managed_agents": [
+        "6979d9df88953e3309db20c7",
+        "6979d9f288953e3309db20cc",
+        "6979da0788953e3309db20db"
+      ]
+    }
+  ],
+  "workflow_sequence": [
+    "News Aggregator (6979d9df88953e3309db20c7)",
+    "Content Summarizer (6979d9f288953e3309db20cc)",
+    "Email Sender (6979da0788953e3309db20db)"
+  ],
+  "manager_agent_id": "6979da2088953e3309db20e0",
+  "created_at": "2026-01-28T00:00:00Z"
+}

@@ -1,0 +1,52 @@
+{
+  "agent_name": "Email Sender",
+  "agent_id": "6979da0788953e3309db20db",
+  "agent_purpose": "assistant",
+  "description": "Sends formatted HackerNews digest via Gmail with delivery tracking and status",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "email_sent": "boolean",
+      "recipient": "string",
+      "subject": "string",
+      "message_id": "string",
+      "sent_at": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "email_sent": true,
+      "recipient": "user@example.com",
+      "subject": "HackerNews Daily Digest",
+      "message_id": "def456uvw",
+      "sent_at": "2023-11-27T12:00:00Z"
+    },
+    "metadata": {
+      "agent_name": "Email Sender",
+      "timestamp": "2023-11-27T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-28T09:47:08.090389",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "email_sent": true,
+      "recipient": "user@example.com",
+      "subject": "HackerNews Daily Digest",
+      "message_id": "def456uvw",
+      "sent_at": "2023-11-27T12:00:00Z"
+    },
+    "metadata": {
+      "agent_name": "Email Sender",
+      "timestamp": "2023-11-27T12:00:00Z"
+    }
+  },
+  "test_passed": true
+}

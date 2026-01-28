@@ -1,0 +1,24 @@
+{
+  "agent_name": "Email Sender",
+  "agent_id": "6979da0788953e3309db20db",
+  "test_message": "Send digest email to user@example.com with subject 'HackerNews Daily Digest' and content: Top stories: AI breakthrough, new framework, security update",
+  "expected_purpose": "email_sender",
+  "timestamp": "2026-01-28T09:47:08.089272",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "email_sent": true,
+      "recipient": "user@example.com",
+      "subject": "HackerNews Daily Digest",
+      "message_id": "def456uvw",
+      "sent_at": "2023-11-27T12:00:00Z"
+    },
+    "metadata": {
+      "agent_name": "Email Sender",
+      "timestamp": "2023-11-27T12:00:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"email_sent\": true,\n    \"recipient\": \"user@example.com\",\n    \"subject\": \"HackerNews Daily Digest\",\n    \"message_id\": \"def456uvw\",\n    \"sent_at\": \"2023-11-27T12:00:00Z\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"Email Sender\",\n    \"timestamp\": \"2023-11-27T12:00:00Z\"\n  }\n}"
+}
